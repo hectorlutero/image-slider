@@ -1,17 +1,40 @@
-.container {
-    width: 60%;
-    margin: auto;
-    overflow: hidden;
+* {
+    box-sizing: border-box;
 }
 
-.slider {
+.carousel-container {
+    width: 400px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-slide {
     display: flex;
     width: 100%;
     height: 255px;
 }
 
-.slider-item img{
+.carousel-slide img{
     width: 400px;
-    height: 255px;
     object-fit: cover;
+}
+
+#prevBtn {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    left: 5%;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+#nextBtn {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    right: 5%;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
 }
