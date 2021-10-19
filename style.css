@@ -1,0 +1,26 @@
+.conatainer {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.slider {
+    width: 400px;
+    height: 225px;
+    overflow: hidden;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+.slider .slides {
+    width: 2560px;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.slider .slide img{
+    float: left;
+    width: 400px;
+    height: 225px;
+}
