@@ -3,15 +3,15 @@ var slides = []
 var time = 3000
 
 //image list
-slides[0] = 'slide1.jpg'
-slides[1] = 'slide2.jpg'
-slides[2] = 'slide3.jpg'
+slides[0] = '/assets/imgs/slide1.jpg'
+slides[1] = '/assets/imgs/slide2.jpg'
+slides[2] = '/assets/imgs/slide3.jpg'
 
 // Change Image
 function changeImage () {
-    document.slide.src = images[i]
+    document.slides.src = slides[i]
 
-    if(i < images.length - 1){
+    if(i < slides.length - 1){
         i++
     } else {
         i = 0 
