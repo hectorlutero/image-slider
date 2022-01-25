@@ -39,7 +39,7 @@ body {
 
 .project-strip {
   margin: 150px 0 150px;
-  filter: blur(10px);
+  /* filter: blur(10px); */
 }
 .project-strip .project {
   cursor: pointer;
@@ -50,10 +50,14 @@ body {
   height: auto;
 }
 
+.project-strip .draggable {
+  height: 200px;
+}
+
 .project-screen {
   width: 768px;
   height: 451px;
-  position: absolute;
+  position: relative;
   left: 0;
   right: 0;
   top: 0;
@@ -61,7 +65,7 @@ body {
   margin: auto;
 }
 .project-screen .project-detail {
-  position: absolute;
+  position: relative;
   left: 0;
   right: 0;
   width: 578px;
@@ -74,7 +78,7 @@ body {
   content: " ";
   width: 768px;
   height: 451px;
-  position: absolute;
+  position: relative;
   background-image: url("https://dl.dropboxusercontent.com/u/26808427/cdn/experiments/training/macbook-frame.png");
   background-repeat: no-repeat;
 }
@@ -82,4 +86,8 @@ body {
   margin-right: -100%;
   float: left;
   cursor: move;
+}
+
+.slick-slide {
+  transition: 0.3s all ease-in-out;
 }
