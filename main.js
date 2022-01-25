@@ -3,18 +3,42 @@ $(".project-detail").slick({
     arrows: false,
     asNavFor: ".project-strip",
     autoplay: false,
+    fade: true,
     autoplaySpeed: 3000
 });
 
 $(".project-strip").slick({
-    slidesToShow: 5,
-    slidesToScroll: 1,
+    slidesToShow: 3,
+    slidesToScroll: 3,
     arrows: false,
     asNavFor: ".project-detail",
     dots: false,
     infinite: true,
     centerMode: true,
-    focusOnSelect: true
+    focusOnSelect: true,
+    responsive: [
+        {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+            },
+        },
+        {
+            breakpoint: 1008,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+            },
+        },
+        {
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            },
+        },
+    ],
 });
 
 
@@ -42,12 +66,15 @@ function setAllImagesScaleDown() {
     });
 }
 
-$('.project-strip .slick-slide, .project-detail .slick-current').click(function () {
+$('.slick-slide').change(function () {
+    setAllImagesScaleDown()
+    getCenteredSlideHeight()
+    console.log('changed');
+
+})
+
+$('body').mouseover(function () {
     getCenteredSlideHeight()
     console.log('clicked');
-    setAllImagesScaleDown()
-}).on(function () {
-    getCenteredSlideHeight()
-    console.log('chaged');
     setAllImagesScaleDown()
 })

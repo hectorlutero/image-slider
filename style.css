@@ -91,3 +91,39 @@ body {
 .slick-slide {
   transition: 0.3s all ease-in-out;
 }
+
+@media screen and (max-width: 767px) {
+  .project-screen {
+    width: 100%;
+    height: auto;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .project-screen .project-detail {
+    position: relative;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    margin: 32px auto 0;
+    z-index: 1;
+    background-color: #333;
+  }
+  .project-screen .screen-frame {
+    content: " ";
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-image: url("https://dl.dropboxusercontent.com/u/26808427/cdn/experiments/training/macbook-frame.png");
+    background-repeat: no-repeat;
+  }
+  .project-strip {
+    margin: 40px 0;
+    /* filter: blur(10px); */
+  }
+
+}
